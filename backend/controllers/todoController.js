@@ -1,6 +1,5 @@
 import Todo from '../models/TodoModel.js';
 
-
 // GET all todos for the authenticated user
 export const getTodos = async (req, res) => {
   const userId = req.user.id; 
@@ -50,6 +49,7 @@ export const updateTodo = async (req, res) => {
 };
 
 
+
 // DELETE todo for the authenticated user
 export const deleteTodo = async (req, res) => {
   const { id } = req.params;
@@ -64,4 +64,6 @@ export const deleteTodo = async (req, res) => {
     res.status(400).json({ error: "Error deleting todo" });
   }
 };
+
+
 

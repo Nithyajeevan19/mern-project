@@ -16,7 +16,7 @@ app.use("/api", todoRoutes);
 app.use('/api',authRoutes)
 
 
-app.listen(7000, () => console.log("Server running on port 5000"));
+app.listen(7000, () => console.log("Server running on port 7000"));
 
 
 mongoose.connect(process.env.MONGO_URI)
