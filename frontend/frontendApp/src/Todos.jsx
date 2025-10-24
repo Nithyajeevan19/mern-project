@@ -48,7 +48,7 @@ function Todos() {
   async function fetchTodos() {
     try {
       const token = getToken();
-      const res = await fetch("http://localhost:7000/api/todos", {
+      const res = await fetch("https://taskmanager-9yu0.onrender.com/api/todos", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -86,7 +86,7 @@ function Todos() {
     try {
       const token = getToken();
       const newTodo = { title, description };
-      const response = await fetch("http://localhost:7000/api/todos", {
+      const response = await fetch("https://taskmanager-9yu0.onrender.com/api/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -121,7 +121,7 @@ function Todos() {
   async function handleDelete(id) {
     try {
       const token = getToken();
-      const response = await fetch(`http://localhost:7000/api/todos/${id}`, {
+      const response = await fetch(`https://taskmanager-9yu0.onrender.com/api/todos/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -146,7 +146,7 @@ function Todos() {
   async function handleUpdate(id) {
     try {
       const token = getToken();
-      const response = await fetch(`http://localhost:7000/api/todos/${id}`, {
+      const response = await fetch(`https://taskmanager-9yu0.onrender.com/api/todos/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -171,7 +171,7 @@ function Todos() {
   async function toggleTodoCompletion(todo) {
     try {
       const token = getToken();
-      const response = await fetch(`http://localhost:7000/api/todos/${todo._id}`, {
+      const response = await fetch(`https://taskmanager-9yu0.onrender.com/api/todos/${todo._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -201,7 +201,7 @@ function Todos() {
   async function toggleStarCompletion(todo) {
     try {
       const token = getToken();
-      const response = await fetch(`http://localhost:7000/api/todos/${todo._id}`, {
+      const response = await fetch(`https://taskmanager-9yu0.onrender.com/api/todos/${todo._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
